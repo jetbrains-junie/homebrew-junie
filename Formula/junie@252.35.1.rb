@@ -5,6 +5,7 @@ class JunieAT252351 < Formula
   sha256 "7e1f22b5db3a04b40d77efccbf4e8d89c8cbbe41e38955a5e1e1d9df623aa963"
   version "252.35.1"
   license "Proprietary" # Or whatever applies
+  keg_only :versioned_formula
   def install
     libexec.install "junie.app"
     (bin/"junie").write <<~EOS
