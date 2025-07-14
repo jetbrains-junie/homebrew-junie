@@ -1,7 +1,7 @@
 class JunieAT252351 < Formula
   desc "Junie CLI"
   homepage "https://www.jetbrains.com/junie"
-  url "https://github.com/jetbrains-junie/artifacts/releases/download/34.1/junie-cloud-eap-252.34.1-macos-aarch64.zip"
+  url "https://github.com/jetbrains-junie/artifacts/releases/download/34.1/junie-cloud-eap-243.34.1-macos-aarch64.zip"
   sha256 "7e1f22b5db3a04b40d77efccbf4e8d89c8cbbe41e38955a5e1e1d9df623aa963"
   version "252.35.1"
   license "Proprietary" # Or whatever applies
