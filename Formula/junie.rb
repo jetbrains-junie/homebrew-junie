@@ -9,7 +9,7 @@ class Junie < Formula
     libexec.install "junie.app"
     (bin/"junie").write <<~EOS
       #!/bin/bash
-      EJ_RUNNER_PWD=/mnt/agent/work/junie
+      EJ_RUNNER_PWD=$(pwd)
       export EJ_RUNNER_PWD
       cd "#{libexec}/junie.app/Contents/MacOS"
       exec ./junie "$@"
