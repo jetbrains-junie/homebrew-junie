@@ -1,9 +1,9 @@
 class Junie < Formula
   desc "Junie CLI"
   homepage "https://www.jetbrains.com/junie"
-  url "https://github.com/JetBrains/junie/releases/download/802.7/junie-eap-802.7-macos-aarch64.zip"
-  sha256 "037490a51318b24e57dbb07b73c97d1cdaf1f585df25f757db5bdd173928839c"
-  version "802.7"
+  url "https://github.com/JetBrains/junie/releases/download/849.19/junie-eap-849.19-macos-aarch64.zip"
+  sha256 "f64de5ccc5abdfc5fdab462313ccc54e5c08bc7466f13243a82b370fb5094b40"
+  version "849.19"
   license "https://jb.gg/junie-tos-eap"
 
   def install
@@ -144,10 +144,13 @@ SHIM_EOF
         # macOS: look for .app bundle
         if [[ -d "$version_dir/Applications/junie.app" ]]; then
           echo "$version_dir/Applications/junie.app/Contents/MacOS/junie"
-        # Linux: look for junie/bin/junie
+        # Linux jpackage: look for junie-app/bin/junie
+        elif [[ -f "$version_dir/junie-app/bin/junie" ]]; then
+          echo "$version_dir/junie-app/bin/junie"
+        # Linux legacy: look for junie/bin/junie
         elif [[ -f "$version_dir/junie/bin/junie" ]]; then
           echo "$version_dir/junie/bin/junie"
-        # Fallback: direct junie binary
+        # Fallback: direct junie binary/script
         elif [[ -f "$version_dir/junie" ]]; then
           echo "$version_dir/junie"
         else
